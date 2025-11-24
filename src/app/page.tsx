@@ -9,6 +9,11 @@ import { Plus, Users, ArrowRight, LogIn } from "lucide-react";
 export default function Home() {
     const router = useRouter();
     const { createGroup, joinGroup, groups, isLoading, error } = useStore();
+
+    useEffect(() => {
+        console.log("Divisor Pecuniae v1.0.1 loaded");
+    }, []);
+
     const [groupName, setGroupName] = useState("");
     const [inviteCode, setInviteCode] = useState("");
     const [mode, setMode] = useState<'create' | 'join' | null>(null);
