@@ -32,7 +32,7 @@ export function CategoryManager({ categories, onAdd, onDelete, onClose }: Catego
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-md p-4 animate-in fade-in duration-200">
             <div className="w-full max-w-md glass-card rounded-3xl overflow-hidden animate-in zoom-in-95 duration-300 shadow-2xl ring-1 ring-white/10">
                 <div className="p-6 border-b border-white/5 flex justify-between items-center bg-white/5">
-                    <h2 className="text-lg font-bold uppercase tracking-widest text-primary">Manage Categories</h2>
+                    <h2 className="text-lg font-bold uppercase tracking-widest text-orange-500">Manage Categories</h2>
                     <Button variant="ghost" size="icon" onClick={onClose} className="rounded-full hover:bg-white/10">
                         <X className="h-5 w-5" />
                     </Button>
@@ -49,7 +49,7 @@ export function CategoryManager({ categories, onAdd, onDelete, onClose }: Catego
                                     value={newLabel}
                                     onChange={(e) => setNewLabel(e.target.value)}
                                     placeholder="Category Name"
-                                    className="flex-1 h-12 rounded-xl border border-white/10 bg-black/20 px-4 text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:border-transparent transition-all"
+                                    className="flex-1 h-12 rounded-xl border border-white/10 bg-black/20 px-4 text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:border-transparent transition-all"
                                 />
                                 <div className="h-12 w-12 flex items-center justify-center bg-white/5 rounded-xl border border-white/10 text-2xl">
                                     {selectedIcon}
@@ -66,7 +66,7 @@ export function CategoryManager({ categories, onAdd, onDelete, onClose }: Catego
                                         className={cn(
                                             "h-10 w-10 rounded-lg flex-shrink-0 flex items-center justify-center text-xl transition-all",
                                             selectedIcon === icon
-                                                ? "bg-primary text-white shadow-lg scale-110"
+                                                ? "bg-gradient-to-r from-red-600 to-orange-500 text-white shadow-lg scale-110"
                                                 : "bg-white/5 hover:bg-white/10"
                                         )}
                                     >
@@ -75,7 +75,7 @@ export function CategoryManager({ categories, onAdd, onDelete, onClose }: Catego
                                 ))}
                             </div>
 
-                            <Button type="submit" className="w-full h-12 rounded-xl bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20 font-bold">
+                            <Button type="submit" className="w-full h-12 rounded-xl bg-gradient-to-r from-red-600 to-orange-500 hover:from-red-700 hover:to-orange-600 shadow-lg shadow-orange-500/20 font-bold">
                                 <Plus className="mr-2 h-5 w-5" />
                                 Add Category
                             </Button>

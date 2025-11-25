@@ -189,7 +189,7 @@ export default function GroupPage() {
                                 <div className="grid gap-3 max-h-[200px] overflow-y-auto custom-scrollbar pr-1">
                                     {group.users.map(user => (
                                         <div key={user.id} className="flex items-center gap-4 p-3 rounded-2xl bg-white/5 border border-white/5">
-                                            <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-primary/20">
+                                            <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-red-600 to-orange-500 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-orange-500/20">
                                                 {user.name.charAt(0)}
                                             </div>
                                             <span className="font-medium text-lg">{user.name}</span>
@@ -225,7 +225,7 @@ export default function GroupPage() {
                     {/* Actions */}
                     {!isAddingExpense && !editingExpense && (
                         <div className="flex justify-center py-2">
-                            <Button size="lg" className="rounded-full h-16 px-8 text-lg shadow-[0_0_40px_-10px_rgba(99,102,241,0.5)] hover:shadow-[0_0_50px_-10px_rgba(99,102,241,0.7)] hover:scale-105 transition-all duration-300 bg-gradient-to-r from-primary to-indigo-500 border border-white/20" onClick={() => setIsAddingExpense(true)}>
+                            <Button size="lg" className="rounded-full h-16 px-8 text-lg shadow-[0_0_40px_-10px_rgba(255,100,0,0.5)] hover:shadow-[0_0_50px_-10px_rgba(255,100,0,0.7)] hover:scale-105 transition-all duration-300 bg-gradient-to-r from-red-600 to-orange-500 hover:from-red-700 hover:to-orange-600 border border-white/20" onClick={() => setIsAddingExpense(true)}>
                                 <Plus className="mr-2 h-6 w-6" />
                                 Add New Expense
                             </Button>

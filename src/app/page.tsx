@@ -76,15 +76,15 @@ export default function Home() {
 
             <div className="max-w-md w-full space-y-10 text-center relative z-10">
                 <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
-                    <div className="inline-flex items-center justify-center p-3 bg-primary/10 rounded-2xl mb-4 ring-1 ring-primary/20 shadow-[0_0_30px_-10px_rgba(99,102,241,0.3)]">
-                        <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-inner">
-                            <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
+                    <div className="inline-flex items-center justify-center p-3 bg-orange-500/10 rounded-2xl mb-4 ring-1 ring-orange-500/20 shadow-[0_0_30px_-10px_rgba(255,100,0,0.3)]">
+                        <div className="w-12 h-12 rounded-xl overflow-hidden shadow-inner bg-gradient-to-br from-red-600 to-orange-500 p-[1px]">
+                            <div className="w-full h-full rounded-[11px] overflow-hidden">
+                                <img src="/mario-coin.jpg" alt="App Icon" className="w-full h-full object-cover" />
+                            </div>
                         </div>
                     </div>
                     <h1 className="text-5xl font-bold tracking-tight text-white drop-shadow-sm">
-                        Divisor <span className="text-primary">pecuniae</span>
+                        Divisor <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">pecuniae</span>
                     </h1>
                     <p className="text-lg text-muted-foreground max-w-xs mx-auto leading-relaxed text-balance">
                         Pecunia Marii omnia emit, eam sapienter expende et cum amicis tuis communica.
@@ -94,7 +94,7 @@ export default function Home() {
                 <div className="grid gap-6 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-150">
                     {!mode ? (
                         <>
-                            <Button size="lg" className="w-full text-lg h-16 shadow-xl shadow-primary/20" onClick={() => setMode('create')}>
+                            <Button size="lg" className="w-full text-lg h-16 shadow-xl shadow-orange-500/20 bg-gradient-to-r from-red-600 to-orange-500 hover:from-red-700 hover:to-orange-600 border-0" onClick={() => setMode('create')}>
                                 <Plus className="mr-2 h-6 w-6" />
                                 Create New Group
                             </Button>
@@ -188,7 +188,7 @@ export default function Home() {
                                     className="group relative w-full flex items-center justify-between p-4 rounded-2xl bg-card/30 border border-white/5 hover:bg-card/50 hover:border-primary/30 transition-all cursor-pointer active:scale-[0.98]"
                                 >
                                     <span className="font-medium text-lg group-hover:text-primary transition-colors">{group.name}</span>
-                                    <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary/20 group-hover:text-primary transition-all">
+                                    <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-orange-500/20 group-hover:text-orange-500 transition-all">
                                         <ArrowRight className="h-4 w-4" />
                                     </div>
                                 </div>

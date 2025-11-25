@@ -28,7 +28,7 @@ export function ConfirmModal({
         <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/60 backdrop-blur-md p-4 animate-in fade-in duration-200">
             <div className="w-full max-w-sm glass-card rounded-3xl overflow-hidden animate-in zoom-in-95 duration-300 shadow-2xl ring-1 ring-white/10">
                 <div className="p-6 flex flex-col items-center text-center space-y-4">
-                    <div className={`w-16 h-16 rounded-full flex items-center justify-center ${variant === 'destructive' ? 'bg-destructive/10 text-destructive' : 'bg-primary/10 text-primary'}`}>
+                    <div className={`w-16 h-16 rounded-full flex items-center justify-center ${variant === 'destructive' ? 'bg-destructive/10 text-destructive' : 'bg-orange-500/10 text-orange-500'}`}>
                         <AlertTriangle className="h-8 w-8" />
                     </div>
 

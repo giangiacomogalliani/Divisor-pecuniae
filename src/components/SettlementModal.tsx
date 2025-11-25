@@ -33,7 +33,7 @@ export function SettlementModal({ isOpen, onClose, onSettle, debtor, creditor, a
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-md p-4 animate-in fade-in duration-200">
             <div className="w-full max-w-md glass-card rounded-3xl overflow-hidden animate-in zoom-in-95 duration-300 shadow-2xl ring-1 ring-white/10">
                 <div className="p-6 border-b border-white/5 flex justify-between items-center bg-white/5">
-                    <h2 className="text-lg font-bold uppercase tracking-widest text-primary">Settle Up</h2>
+                    <h2 className="text-lg font-bold uppercase tracking-widest text-orange-500">Settle Up</h2>
                     <Button variant="ghost" size="icon" onClick={onClose} className="rounded-full hover:bg-white/10">
                         <X className="h-5 w-5" />
                     </Button>
@@ -50,11 +50,11 @@ export function SettlementModal({ isOpen, onClose, onSettle, debtor, creditor, a
 
                         <div className="flex flex-col items-center text-muted-foreground">
                             <span className="text-[10px] font-bold uppercase tracking-widest mb-1">Paying</span>
-                            <ArrowRight className="h-6 w-6 text-primary animate-pulse" />
+                            <ArrowRight className="h-6 w-6 text-orange-500 animate-pulse" />
                         </div>
 
                         <div className="flex flex-col items-center gap-2">
-                            <div className="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center text-2xl font-bold text-primary-foreground shadow-lg shadow-primary/20">
+                            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-red-600 to-orange-500 flex items-center justify-center text-2xl font-bold text-white shadow-lg shadow-orange-500/20">
                                 {creditor.name.charAt(0)}
                             </div>
                             <span className="font-bold text-sm">{creditor.name}</span>
@@ -76,7 +76,7 @@ export function SettlementModal({ isOpen, onClose, onSettle, debtor, creditor, a
                                     autoFocus
                                 />
                             </div>
-                            <div className="h-1 w-24 bg-primary/30 rounded-full mt-2" />
+                            <div className="h-1 w-24 bg-orange-500/30 rounded-full mt-2" />
                         </div>
 
                         <p className="text-center text-xs text-muted-foreground">
@@ -88,7 +88,7 @@ export function SettlementModal({ isOpen, onClose, onSettle, debtor, creditor, a
                         <Button type="button" variant="ghost" className="flex-1 h-12 rounded-2xl" onClick={onClose}>
                             Cancel
                         </Button>
-                        <Button type="submit" className="flex-[2] h-12 rounded-2xl text-lg shadow-lg shadow-primary/20 bg-primary hover:bg-primary/90">
+                        <Button type="submit" className="flex-[2] h-12 rounded-2xl text-lg shadow-lg shadow-orange-500/20 bg-gradient-to-r from-red-600 to-orange-500 hover:from-red-700 hover:to-orange-600 border-0">
                             Pay Now
                         </Button>
                     </div>

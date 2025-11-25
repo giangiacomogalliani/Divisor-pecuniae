@@ -115,7 +115,7 @@ export function BalancesCarousel({ users, expenses, categories, currency }: Bala
                                     </div>
                                     <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden">
                                         <div
-                                            className="h-full bg-primary rounded-full transition-all duration-500"
+                                            className="h-full bg-gradient-to-r from-red-600 to-orange-500 rounded-full transition-all duration-500"
                                             style={{ width: `${percentage}%` }}
                                         />
                                     </div>
@@ -223,7 +223,7 @@ export function BalancesCarousel({ users, expenses, categories, currency }: Bala
                                         </div>
                                         <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
                                             <div
-                                                className="h-full bg-indigo-400 rounded-full"
+                                                className="h-full bg-gradient-to-r from-red-600 to-orange-500 rounded-full"
                                                 style={{ width: `${(cat.total / totalExpenses) * 100}%` }}
                                             />
                                         </div>
@@ -244,7 +244,7 @@ export function BalancesCarousel({ users, expenses, categories, currency }: Bala
                         onClick={() => scrollTo(i)}
                         className={cn(
                             "h-1.5 rounded-full transition-all duration-300",
-                            activeIndex === i ? "w-6 bg-primary" : "w-1.5 bg-white/20 hover:bg-white/40"
+                            activeIndex === i ? "w-6 bg-orange-500" : "w-1.5 bg-white/20 hover:bg-white/40"
                         )}
                     />
                 ))}

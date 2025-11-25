@@ -16,7 +16,7 @@ export function OptionsModal({ isOpen, onClose }: OptionsModalProps) {
                 <div className="p-6 flex flex-col space-y-6">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                            <div className="w-10 h-10 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500">
                                 <Settings className="h-5 w-5" />
                             </div>
                             <h3 className="text-xl font-bold">Opzioni</h3>

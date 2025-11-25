@@ -137,7 +137,7 @@ export function ExpenseForm({ users, categories, currency, onSubmit, onCancel, o
         <>
             <form onSubmit={handleSubmit} className="space-y-8 glass-card p-8 rounded-3xl border border-white/10 shadow-2xl animate-in fade-in zoom-in-95 duration-300 relative overflow-hidden max-h-[90vh] overflow-y-auto custom-scrollbar">
                 {/* Decorative background */}
-                <div className="absolute top-0 right-0 w-40 h-40 bg-primary/10 rounded-full blur-3xl -z-10 pointer-events-none" />
+                <div className="absolute top-0 right-0 w-40 h-40 bg-orange-500/10 rounded-full blur-3xl -z-10 pointer-events-none" />
                 <div className="absolute bottom-0 left-0 w-40 h-40 bg-secondary/10 rounded-full blur-3xl -z-10 pointer-events-none" />
 
                 <div className="space-y-6">
@@ -156,7 +156,7 @@ export function ExpenseForm({ users, categories, currency, onSubmit, onCancel, o
                                 autoFocus
                             />
                         </div>
-                        <div className="h-1 w-24 bg-primary/30 rounded-full mt-2" />
+                        <div className="h-1 w-24 bg-orange-500/30 rounded-full mt-2" />
 
                         {/* Individual Payer Inputs (if > 1 payer) */}
                         {payers.length > 1 && (
@@ -172,7 +172,7 @@ export function ExpenseForm({ users, categories, currency, onSubmit, onCancel, o
                                                     step="0.01"
                                                     value={paidBy[payerId] || ""}
                                                     onChange={(e) => handlePayerAmountChange(payerId, e.target.value)}
-                                                    className="w-20 bg-white/5 border border-white/10 rounded-lg text-center text-sm py-1 focus:border-primary focus:outline-none"
+                                                    className="w-20 bg-white/5 border border-white/10 rounded-lg text-center text-sm py-1 focus:border-orange-500 focus:outline-none"
                                                 />
                                             </div>
                                         </div>
@@ -189,7 +189,7 @@ export function ExpenseForm({ users, categories, currency, onSubmit, onCancel, o
                             type="text"
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
-                            className="flex h-14 w-full rounded-2xl border border-white/10 bg-black/20 px-5 py-3 text-lg ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:border-transparent transition-all shadow-inner"
+                            className="flex h-14 w-full rounded-2xl border border-white/10 bg-black/20 px-5 py-3 text-lg ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:border-transparent transition-all shadow-inner"
                             placeholder="e.g. Dinner, Taxi, Groceries"
                         />
                     </div>
@@ -206,7 +206,7 @@ export function ExpenseForm({ users, categories, currency, onSubmit, onCancel, o
                                     className={cn(
                                         "flex items-center gap-2 px-3 py-2 rounded-xl border transition-all whitespace-nowrap",
                                         category === cat.id
-                                            ? "bg-primary/20 border-primary text-primary"
+                                            ? "bg-orange-500/20 border-orange-500 text-orange-500"
                                             : "bg-white/5 border-white/10 hover:bg-white/10 text-muted-foreground"
                                     )}
                                 >
@@ -217,7 +217,7 @@ export function ExpenseForm({ users, categories, currency, onSubmit, onCancel, o
                             <button
                                 type="button"
                                 onClick={() => setIsCategoryManagerOpen(true)}
-                                className="flex items-center gap-2 px-3 py-2 rounded-xl border border-dashed border-white/20 hover:border-primary/50 hover:bg-primary/10 text-muted-foreground hover:text-primary transition-all whitespace-nowrap"
+                                className="flex items-center gap-2 px-3 py-2 rounded-xl border border-dashed border-white/20 hover:border-orange-500/50 hover:bg-orange-500/10 text-muted-foreground hover:text-orange-500 transition-all whitespace-nowrap"
                             >
                                 <Plus className="h-4 w-4" />
                                 <span className="text-xs font-medium">New</span>
@@ -237,7 +237,7 @@ export function ExpenseForm({ users, categories, currency, onSubmit, onCancel, o
                                     type="date"
                                     value={date}
                                     onChange={(e) => setDate(e.target.value)}
-                                    className="flex h-12 w-full rounded-xl border border-white/10 bg-black/20 pl-10 pr-3 text-sm text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                                    className="flex h-12 w-full rounded-xl border border-white/10 bg-black/20 pl-10 pr-3 text-sm text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
                                 />
                             </div>
                         </div>
@@ -249,7 +249,7 @@ export function ExpenseForm({ users, categories, currency, onSubmit, onCancel, o
                                     type="time"
                                     value={time}
                                     onChange={(e) => setTime(e.target.value)}
-                                    className="flex h-12 w-full rounded-xl border border-white/10 bg-black/20 pl-10 pr-3 text-sm text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                                    className="flex h-12 w-full rounded-xl border border-white/10 bg-black/20 pl-10 pr-3 text-sm text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
                                 />
                             </div>
                         </div>
@@ -269,7 +269,7 @@ export function ExpenseForm({ users, categories, currency, onSubmit, onCancel, o
                                         className={cn(
                                             "flex items-center gap-2 px-4 py-2 rounded-full border transition-all whitespace-nowrap",
                                             isSelected
-                                                ? "bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/25 scale-105"
+                                                ? "bg-gradient-to-r from-red-600 to-orange-500 text-white border-transparent shadow-lg shadow-orange-500/25 scale-105"
                                                 : "bg-white/5 border-white/10 hover:bg-white/10 text-muted-foreground"
                                         )}
                                     >
@@ -293,7 +293,7 @@ export function ExpenseForm({ users, categories, currency, onSubmit, onCancel, o
                             <button
                                 type="button"
                                 onClick={() => setSelectedUserIds(users.map(u => u.id))}
-                                className="text-[10px] font-bold text-primary uppercase tracking-wider hover:underline"
+                                className="text-[10px] font-bold text-orange-500 uppercase tracking-wider hover:underline"
                             >
                                 Select All
                             </button>
@@ -308,13 +308,13 @@ export function ExpenseForm({ users, categories, currency, onSubmit, onCancel, o
                                         className={cn(
                                             "flex items-center gap-3 p-3 rounded-2xl border cursor-pointer transition-all duration-200",
                                             isSelected
-                                                ? "bg-primary/10 border-primary/50 shadow-[0_0_15px_-5px_rgba(99,102,241,0.2)]"
+                                                ? "bg-orange-500/10 border-orange-500/50 shadow-[0_0_15px_-5px_rgba(255,100,0,0.2)]"
                                                 : "bg-white/5 border-white/5 hover:bg-white/10 hover:border-white/10 opacity-60 hover:opacity-100"
                                         )}
                                     >
                                         <div className={cn(
                                             "h-6 w-6 rounded-lg flex items-center justify-center border transition-all",
-                                            isSelected ? "bg-primary border-primary text-primary-foreground scale-110" : "border-white/20 bg-transparent"
+                                            isSelected ? "bg-gradient-to-r from-red-600 to-orange-500 border-transparent text-white scale-110" : "border-white/20 bg-transparent"
                                         )}>
                                             {isSelected && <Check className="h-4 w-4" />}
                                         </div>
@@ -330,7 +330,7 @@ export function ExpenseForm({ users, categories, currency, onSubmit, onCancel, o
                     <Button type="button" variant="ghost" className="flex-1 h-14 rounded-2xl" onClick={onCancel}>
                         Cancel
                     </Button>
-                    <Button type="submit" className="flex-[2] h-14 rounded-2xl text-lg shadow-xl shadow-primary/20 bg-gradient-to-r from-primary to-indigo-500 border border-white/20">
+                    <Button type="submit" className="flex-[2] h-14 rounded-2xl text-lg shadow-xl shadow-orange-500/20 bg-gradient-to-r from-red-600 to-orange-500 hover:from-red-700 hover:to-orange-600 border border-white/20">
                         {initialData ? "Save Changes" : "Add Expense"}
                     </Button>
                 </div>

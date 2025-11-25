@@ -39,8 +39,8 @@
   --popover: oklch(0.15 0.04 260);
   --popover-foreground: oklch(0.98 0.01 260);
 
-  --primary: oklch(0.65 0.20 270);
-  /* Indigo 400 */
+  --primary: oklch(0.65 0.22 40);
+  /* Red/Orange */
   --primary-foreground: oklch(0.98 0.01 260);
 
   --secondary: oklch(0.60 0.15 160);
@@ -61,7 +61,7 @@
 
   --border: oklch(0.25 0.05 260);
   --input: oklch(0.25 0.05 260);
-  --ring: oklch(0.65 0.20 270);
+  --ring: oklch(0.65 0.22 40);
 
   --radius: 1rem;
 }
