@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useStore } from "@/lib/store";
 import { Button } from "@/components/Button";
-import { Plus, Users, ArrowRight, LogIn } from "lucide-react";
+import { Plus, Users, ArrowRight, LogIn, Settings } from "lucide-react";
+import { OptionsModal } from "@/components/OptionsModal";
 
 export default function Home() {
     const router = useRouter();
@@ -17,6 +18,7 @@ export default function Home() {
     const [groupName, setGroupName] = useState("");
     const [inviteCode, setInviteCode] = useState("");
     const [mode, setMode] = useState<'create' | 'join' | null>(null);
+    const [isOptionsOpen, setIsOptionsOpen] = useState(false);
 
     const handleCreateGroup = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -57,6 +59,20 @@ export default function Home() {
             {/* Background Gradients */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[120px] -z-10 pointer-events-none" />
             <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-[100px] -z-10 pointer-events-none" />
+
+            {/* Options Button */}
+            <div className="absolute top-6 right-6 z-20">
+                <Button
+                    variant="ghost"
+                    size="icon"
+                    className="rounded-full bg-black/20 backdrop-blur-md border border-white/5 hover:bg-black/40"
+                    onClick={() => setIsOptionsOpen(true)}
+                >
+                    <Settings className="h-5 w-5 text-muted-foreground" />
+                </Button>
+            </div>
+
+            <OptionsModal isOpen={isOptionsOpen} onClose={() => setIsOptionsOpen(false)} />
 
             <div className="max-w-md w-full space-y-10 text-center relative z-10">
                 <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
